@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+     margin: 0;
+     width: 100%;
+     min-height: 100vh;
+     font-family: 'poppins';
+     box-sizing: border-box;
+}
+
+@keyframes typing {
+     from { width: 0; }
+     to { width: 20ch; }
+ }
+ 
+ @keyframes blink-caret {
+     from, to { border-color: transparent; }
+     50% { border-color: black; }
+ }
+
+
+/* default */
+
+.mainTitle h1 {
+     font-size: 4em;
+}
+
+@media screen and (max-width:768px) {
+     .mainTitle h1 {
+          font-size: 3em;
+     }
+}
+
+section {
+     box-sizing: border-box;
+     min-height: 100vh;
+     padding: 25vh 12vw;
+}
+
+@media screen and (max-width:1200px) {
+     section {
+          padding: 2em 20px;
+     }
+}
+
+p { 
+     font-size: 1.2em;
+}
+
+.topAbout, .bottomAbout, .topMyTech, .bottomMyTech , .leftFaQ, .rightfaQ {
+     margin: 4em 0;
+}
+/* default */
+
+/* navbar */
+.navbar {
+     top: 0;
+     width: 100%;
+     z-index: 999;
+     padding: 20px ;
+     display: flex;
+     position: fixed;
+     box-sizing: border-box;
+     backdrop-filter: blur(10px);
+     background-color: transparent;
+     justify-content: space-between;
+     box-shadow: 0 0 12px rgba(0, 0, 0, 0.107);
+}
+
+.logo a {
+     color: rgb(0, 0, 0);
+     font-size: 1.5em;
+     font-weight: bold;
+     text-decoration: none;
+}
+
+ .nav {
+     display: flex;
+     align-items: center;
+ }
+
+.nav a {
+     margin: 0 15px;
+     color: rgb(0, 0, 0);
+     transition: .4s;
+     text-decoration: none;
+     border-bottom: 4px solid transparent;
+}
+
+.nav a:hover {
+     border-bottom: 4px solid;
+}
+
+.contact a {
+     background: rgb(255, 0, 0);
+     color: rgb(255, 255, 255);
+     padding: 10px 15px;
+     border-radius: 10px;
+}
+
+.contact a:hover {
+     border-bottom: 4px solid rgb(255, 0, 0);
+}
+
+@media screen and (max-width:768px) {
+     .navbar {
+          flex-direction: column;
+          align-items: center;
+     }
+
+     .logo {
+          display: none;
+     }
+
+     .nav a {
+          margin: 0 15px;
+     }
+}
+/* navbar */
+
+
+
+/* hero */
+.hero {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+
+.hero h1 {
+     box-sizing: border-box;
+     white-space: nowrap;
+     overflow: hidden;
+     width: 20ch; /* Sesuaikan dengan panjang teks */
+     animation: typing 4s steps(20, end), blink-caret .75s step-end infinite;
+     font-size: 3.4em;
+}
+
+.leftHero, .rightHero {
+     width: 100%;
+}
+
+.rightHero img {
+     width: 100%;
+     box-sizing: border-box;
+}
+
+
+@media screen and (max-width:1200px) {
+     .hero {
+          flex-direction: column;
+          justify-content: left;
+          width: 100%;
+          padding-top: 20vh;
+     }
+
+     .hero h1 {
+          font-size: 2em;
+          animation: none;
+     }
+
+     .leftHero, .rightHero {
+          width: 100%;
+     }     
+
+}
+/* hero */
+
+
+/* about */
+.bottomAbout {
+     display: flex;
+     justify-content: space-around;
+}
+
+.cardAbout {
+     width: 36%;
+     margin: 15px;
+     padding: 15px;
+     transition: .3s;
+     border-radius: 10px;
+     box-sizing: border-box;
+     border: 1px solid rgb(223, 223, 255);
+     box-shadow: 0px 10px 15px rgb(255, 169, 169);
+}
+
+.cardAbout:hover {
+     transform: translateY(-10px);
+}
+/* about */
+
+@media screen and (max-width:800px) {
+     .bottomAbout {
+          flex-direction: column;
+     }
+
+     .cardAbout {
+          width: 100%;
+          margin: 5px;
+     }
+}
+
+
+/* project */
+.bottomProject {
+     display: flex;
+     justify-content: space-around;
+}
+
+.cardProject {
+     margin: 10px;
+     display: flex;
+     padding: 15px;
+     transition: .3s;
+     border-radius: 10px;
+     box-sizing: border-box;
+     flex-direction: column;
+     border: 1px solid gray;
+     justify-content: space-between;
+     border: 1px solid rgb(223, 223, 255);
+     box-shadow: 0px 10px 15px rgb(255, 169, 169);
+}
+
+.cardProject:hover {
+     transform: translateY(-10px);
+     background-color: red;
+     color: white;
+     .visit a {
+          color: red;
+          background-color: rgb(255, 255, 255);
+     }
+}
+
+.visit a {
+     color: white;
+     font-size: 1.2em;
+     padding: 5px 35px;
+     text-decoration: none;
+     background-color: red;
+}
+
+@media screen and (max-width:1400px) {
+     .bottomProject {
+          flex-direction: column;
+     }
+
+     .cardProject {
+          width: 100%;
+     }
+}
+/* project */
+
+/* faq */
+.FaQ {
+     display: flex;
+     color: white;
+     align-items: baseline;
+     background-color: red;
+     justify-content: space-between;
+}
+
+.leftFaQ h1 {
+     font-size: 2.5em;
+}
+
+.leftFaQ {
+     width: 100%;
+}
+
+.rightFaQ {
+     width: 100%;
+}
+
+@media screen and (max-width:1200px) {
+     .FaQ {
+          flex-direction: column;
+     }
+}
+/* faq */
+
+/* Contact */
+.contact {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: baseline;
+}
+
+.contact input {
+     width: 100%;
+     margin: 10px 0;
+     height: 50px;
+     padding: 5px;
+}
+
+.message {
+     width: 100%;
+}
+
+.message input {
+     padding: 5px;
+     height: 200px;
+}
+
+.contact button {
+     background-color: red;
+     color: white;
+     border: none;
+     padding: 20px 30px;
+     font-size: 1.2em;
+     border-radius: 20px;
+}
+/* Contact */
+
+/* footer */
+footer {
+     display: flex;
+     color: white;
+     background: red;
+     align-items: center;
+     flex-direction: column;
+     justify-content: center;
+     padding: 20px 0;
+}
+
+.bottomFooter a {
+     text-decoration: none;
+     color: white;
+     margin: 15px;
+}
+/* footer */
